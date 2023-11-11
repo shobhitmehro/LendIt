@@ -26,22 +26,39 @@ const addItemRequest = async (itemName) => {
     await ItemRequest.create({itemName: itemName})
 }
 
-app.use(express.json());
+// returns an array of all ItemRequests in the MongoDB
+const retrieveItemRequests = async () => {
+    try {
+        await mongoose.connect(uri)
+    } catch (err) {
+        console.log('error: ' + err)
+    }
+    await mongoose.connection
+    collections = await mongoose.connection.db.collection('itemrequests')
+    const itemRequestsCollection = mongoose.connection.db.collection('itemrequests')
+    const toReturn = await itemRequestsCollection.find().toArray()
+    return toReturn
+}
 
+app.get('/', async (req, res) => {
+    textToReturn = await retrieveItemRequests()
+    res.send(textToReturn)
+    // res.send("new text here")
+})
+
+app.use(express.json());
 app.use(express.static( path.join(__dirname, 'public')))
 
-app.set('view engine', 'html');
-app.set('views', path.join(__dirname, '/views'))
+// app.set('view engine', 'html');
+// app.set('views', path.join(__dirname, '/views'))
 
 
 // app.get('/index', (req, res) => {
 //     res.render('index')
 // })
 
-app.get('*', async (req, res) => {
-    res.send('hello world')
-})
+
 
 app.listen(port,() => {
-    console.log(`Server running at port `+port);
+    console.log(`Server running at port `+port)
 });
