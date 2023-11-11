@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Navbar.scss'
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
+import SignInButton from './SignInButton';
 
 
 const Navbar = () => {
@@ -21,6 +22,7 @@ const Navbar = () => {
                 <a href={`/${item}`}>{item}</a>
               </li>
            ))}
+           <SignInButton/>
         </ul>
 
         
