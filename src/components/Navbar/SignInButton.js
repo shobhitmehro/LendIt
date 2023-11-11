@@ -5,19 +5,35 @@ export default function SignInButton(){
 
     return (
         <div>
-            {!user && !isLoading && (
-            <button 
-                className='signinbutton'
-                onClick={()=>loginWithRedirect()}
-                >
-                Log In
-            </button>)}
-            {user && !isLoading && (
+            {isLoading && (
                 <button 
-                    className='signinbutton'
+                    className='sign-in-loading-button'
+                    style={{backgroundColor: "transparent",
+                            pointerEvents: "none",
+                            color: "#ffffff",
+                            border: "none"}}
+                >
+                Please Wait...
+                </button>
+            )}
+            {!user && !isLoading && (
+                <button 
+                    style={{backgroundColor: "transparent",
+                    color: "#ffffff",
+                    border: "none"}}
+                    onClick={()=>loginWithRedirect()}
+                >
+                LOG IN
+                </button>)}
+            {user && !isLoading && (
+
+                <button 
+                    style={{backgroundColor: "transparent",
+                    color: "#ffffff",
+                    border: "none"}}
                     onClick={()=>logout() }
                 >
-                Log Out
+                LOG OUT
                 </button>
             )} 
         </div>
