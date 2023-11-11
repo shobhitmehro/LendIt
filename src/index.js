@@ -11,13 +11,14 @@ const clientID = '2bw9FBMuLTsX6gbEe2Qvob4bCnqmBAnH';
 
 ReactDOM.render(
 
-  <Auth0Provider
-  domain = {domain}
-  clientId= {clientID}
-  redirectUri = {window.location.origin}> 
-    <BrowserRouter>
-        <App/>
-    </BrowserRouter>
-  </Auth0Provider>
+  <BrowserRouter>
+    <Auth0Provider
+      domain = {domain}
+      clientId= {clientID}
+      redirectUri = 'http://localhost:3000/home'
+    > 
+    <App/>
+    </Auth0Provider>
+  </BrowserRouter>
 
 , document.getElementById('root'))
