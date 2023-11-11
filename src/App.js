@@ -14,7 +14,9 @@ const App = () => {
         <Navbar />
 
         <Routes>
+          <Route exact path = '/'  element = {<Landing />} />
           <Route exact path = 'home'  element = {<Landing />} />
+
           <Route exact path = 'borrow'  element = {<Borrow />} />
 
 
