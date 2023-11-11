@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState(false) 
 
   return (
 
@@ -19,7 +18,7 @@ const Navbar = () => {
            {[ 'home', 'borrow', 'lend'].map((item) => (
               <li className="app__flex p-text" key = {`link'-${item}`}>
                 <div />
-                <a href={`#${item}`}>{item}</a>
+                <a href={`/${item}`}>{item}</a>
               </li>
            ))}
         </ul>
