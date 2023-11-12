@@ -9,8 +9,8 @@ function Profile(){
 
     const {user, logout, isLoading} = useAuth0();
     const [borrowedData, setBorrowedData] = useState([
-        {"name": "iclicker", "borrower": "Mark", "returnDate": "2024/01/01"},
-        {"name": "iclicker", "borrower": "Mark", "returnDate": "2024/01/01"}
+        {"name": "iclicker", "lender": "Mark", "returnDate": "2024/01/01"},
+        {"name": "iclicker", "lender": "Mark", "returnDate": "2024/01/01"}
     ]);
     const [lentData, setLentData] = useState([
     ]);
