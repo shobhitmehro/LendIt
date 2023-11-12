@@ -1,9 +1,10 @@
-const port = 3000
+const port = 3001
 const express = require('express');
 const app = express();
 const path = require('path');
 
 const mongoose = require('mongoose');
+const cors = require('cors')
 const { readSync } = require('fs');
 const uri = "mongodb+srv://brianliu8709:hack-umass-lendit!@cluster0.nkvb3ht.mongodb.net/?retryWrites=true&w=majority"
 
@@ -112,29 +113,35 @@ const retrieveLendRequests = async (searchFilter = null) => {
 }
 
 app.use(express.json());
+app.use(cors({
+    origin: '*'
+}))
 
 app.get('/borrow-request', async (req, res) => {
     const searchFilter = req.body != undefined && req.body.searchFilter != undefined 
     ? req.body.searchFilter 
     : null
+    // res.set('Access-Control-Allow-Origin', '*');
     const borrowRequests = await retrieveBorrowRequests(searchFilter)
-    res.json(borrowRequests)
+    console.log(borrowRequests)
+    res.json(JSON.stringify(borrowRequests))
+    // res.json(780)
 })
 app.get('/lend-request', async (req, res) => {
     const searchFilter = req.body != undefined && req.body.searchFilter != undefined 
     ? req.body.searchFilter 
     : null
     const lendRequests = await retrieveLendRequests(searchFilter)
-    res.json(lendRequests)
+    res.json(JSON.stringify(lendRequests))
 })
 
 app.get('/', async (req, res) => {
     // await addBorrowRequest('iClicker', 'Brian Liu', 'bxliu@umass.edu', new Date(), new Date ())
     // await addLendRequest('iClicker', 'Shobhit', 'bxliu@umass.edu', new Date(), new Date ())
-    borrowReqs = await retrieveBorrowRequests()
-    lendReqs = await retrieveLendRequests()
-    textToReturn = borrowReqs
-    res.json(textToReturn)
+    // borrowReqs = await retrieveBorrowRequests()
+    // lendReqs = await retrieveLendRequests()
+    // textToReturn = borrowReqs
+    // res.json(textToReturn {data})
 })
 
 app.post('/borrow-request', async (req, res) => {
