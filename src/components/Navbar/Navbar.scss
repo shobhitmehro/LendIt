@@ -1,9 +1,11 @@
 
 
 .app__navbar {
-    position: fixed;
+    position: relative;
     
     z-index: 2;
+    background: linear-gradient(to right, #11989e , #38ef7d);
+
     
     width: 100%;
     height: 50px;
