@@ -7,7 +7,7 @@ import { images } from '../../constants';
 
 
 const Borrow = () => {
-  const [borrowList, setBorrowList] = useState({})
+  const [borrowList, setBorrowList] = useState()
   async function fetchData() {
       const response = await fetch('http://localhost:3001/borrow-request', {
         mode: 'cors',
@@ -35,7 +35,7 @@ const Borrow = () => {
 
   return (
     <div>
-   
+    {borrowList!=undefined && (
       <div id='borrow' className='app__borrow '>
       <div className='app__borrow-title-btn'>
         <h4 className='head-text'>Borrow Requests</h4>
@@ -54,6 +54,7 @@ const Borrow = () => {
         {borrowList.map((item,index) => (
             <div className='app__borrow-item'>
             <img src={images.iclicker} alt='image' />
+            <h6 className='head-text'>{item.itemName}</h6>
             <h6 className='head-text'>{item.borrowerName}</h6>
             <p> Get now. Return by {item.timeEnd}</p>
             <button type='button' onClick={handleButtonClick}>Borrow Now</button>
@@ -66,7 +67,7 @@ const Borrow = () => {
         
       </div>
   </div>
-    
+    )}
     </div>
   )
 }
