@@ -8,6 +8,7 @@ import { images } from '../../constants';
 
 const Borrow = () => {
   const [borrowList, setBorrowList] = useState()
+  const [isSubmitted, setIsSubmitted] = useState(false)
   async function fetchData() {
       const response = await fetch('http://localhost:3001/borrow-request', {
         mode: 'cors',
@@ -30,7 +31,7 @@ const Borrow = () => {
   })
 
   const handleButtonClick = () => {
-
+      setIsSubmitted(true);
   }
 
   return (
@@ -57,7 +58,7 @@ const Borrow = () => {
             <h6 className='head-text'>{item.itemName}</h6>
             <h6 className='head-text'>{item.borrowerName}</h6>
             <p> Get now. Return by {item.timeEnd.substring(0,10)}</p>
-            <button type='button' onClick={handleButtonClick}>Borrow Now</button>
+            <button type='button' onClick={handleButtonClick}>{ isSubmitted == true ? item.borrowerEmail : 'Borrow Now'}</button>
           </div>
         ))}
         
