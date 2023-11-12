@@ -2,9 +2,12 @@ import React from 'react';
 import  './Landing.scss';
 import { easeInOut, motion } from 'framer-motion';
 import { images } from '../../constants';
+import { useNavigate } from "react-router-dom";
+
 
 
 const Landing = () => {
+
   return (
     <div id='home' className='app__landing '>
      

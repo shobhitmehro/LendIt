@@ -11,6 +11,7 @@
      font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif; 
       color: white;
       padding: 0.5rem;
+      
         
     }
     h6 {
@@ -27,7 +28,11 @@
 
     
 }
-
+.app__borrow-title-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .search-bar {
     display: flex;
     justify-content: center;

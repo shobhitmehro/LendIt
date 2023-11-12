@@ -3,6 +3,8 @@
     min-height: 100vh;
     height : max-content;
     padding-top: 5rem;
+    
+    
 }
 p {
     display: flex;
@@ -10,6 +12,53 @@ p {
     justify-content: center;
     text-align: center;
     padding: 1rem;
+    color: white;
+
+    
+    
+}
+
+.app__lend {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+     
+    
+
+    .head-text {
+        align-items: center;
+        justify-content: center;
+    }
+
+    h5 {
+        margin-top: 1rem;
+        align-items: center;
+        justify-content: center;
+        font-size: large;
+    }
+
+     button {
+        margin-top: 1rem;
+                //width: 52%;
+                text-decoration: none;
+                text-align: center;
+                font-size: 16px;
+                padding: 15px 32px;
+                border-radius: 15px;
+                cursor: pointer;
+                border: 2px solid maroon;
+                background-color: maroon;
+                color: white;
+                font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif; 
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    background-color:#b94e48;
+                }
+
+     }
+   
 }
 .app__lend-lended-container {
     
@@ -19,18 +68,41 @@ p {
     width: 85%;
     background-color: rgba(201, 242, 155, 0.5);
     border-radius: 20px;
+    
+ 
+    
+     
+
+    @media screen and (max-width: 1000px) {
+        width: 90%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    
+
+   
 
 
 }
 
+
 .app__lend-lended-item {
+    
     //width: 80%;
+    
     margin: 0 auto;
     height: 60px;
     background-color: antiquewhite;
     display: flex;
     justify-content: center;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
     
+    
+    
+    text-align: center;
     align-items: center;
     border-radius: 10px;
     margin:1rem;
@@ -40,7 +112,16 @@ p {
         
     }
 
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        min-height: fit-content;
+        
+    }
+
+    
+
     
 
     
 }
+
