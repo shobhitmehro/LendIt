@@ -15,7 +15,7 @@
     
     
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     padding: 2rem 2rem;
   
@@ -28,9 +28,9 @@
 .app__navbar-links {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding-right: 20%;
+    //padding-right: 20%;
     list-style: none;
 
     li {

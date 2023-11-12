@@ -56,7 +56,7 @@ const Borrow = () => {
             <img src={images.iclicker} alt='image' />
             <h6 className='head-text'>{item.itemName}</h6>
             <h6 className='head-text'>{item.borrowerName}</h6>
-            <p> Get now. Return by {item.timeEnd}</p>
+            <p> Get now. Return by {item.timeEnd.substring(0,10)}</p>
             <button type='button' onClick={handleButtonClick}>Borrow Now</button>
           </div>
         ))}
