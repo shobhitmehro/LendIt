@@ -62,8 +62,6 @@ const retrieveItemRequests = async () => {
     return toReturn
 }
 
-<<<<<<< Updated upstream
-=======
 // returns an array of all LendRequests in the MongoDB, if given a search filter, returns
 // only the LendRequest items that contain that filter in their itemName property
 const retrieveLendRequests = async (searchFilter = null) => {
@@ -104,7 +102,6 @@ app.get('/lend-request', async (req, res) => {
     res.json(JSON.stringify(lendRequests))
 })
 
->>>>>>> Stashed changes
 app.get('/', async (req, res) => {
     textToReturn = await retrieveItemRequests()
     res.send(textToReturn)
@@ -113,14 +110,6 @@ app.get('/', async (req, res) => {
 
 
 
-<<<<<<< Updated upstream
-app.use(express.json());
-=======
-app.post('/person-request', async (req, res)=>{
-    const {name, email, borrowHistory, lendHistory} = req.body
-})
-
->>>>>>> Stashed changes
 app.use(express.static( path.join(__dirname, 'public')))
 
 // app.set('view engine', 'html');

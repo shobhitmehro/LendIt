@@ -9,9 +9,6 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-<<<<<<< Updated upstream
-    <App />
-=======
     <Auth0Provider
       domain = {domain}
       clientId= {clientID}
@@ -19,7 +16,6 @@ root.render(
     > 
     <App/>
     </Auth0Provider>
->>>>>>> Stashed changes
   </BrowserRouter>
 );
 

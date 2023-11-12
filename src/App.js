@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
-import './App.css';
-import SignInButton from './components/signin';
-import {Route, Link} from "react-router-dom";
-=======
 import React from 'react';
 
 //import { Footer, Header, Hobbies, Skills, Works } from './container';
@@ -32,13 +27,6 @@ const App = () => {
         </Routes>
        
         
-
->>>>>>> Stashed changes
-
-function App() {
-  return(
-    <div className='App'>
-      
     </div>
   )
 }
