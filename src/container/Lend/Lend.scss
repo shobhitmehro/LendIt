@@ -1,0 +1,46 @@
+#lend {
+    background: linear-gradient(to right, #11989e , #38ef7d);
+    min-height: 100vh;
+    height : max-content;
+    padding-top: 5rem;
+}
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+.app__lend-lended-container {
+    
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 2rem;
+    width: 85%;
+    background-color: rgba(201, 242, 155, 0.5);
+    border-radius: 20px;
+
+
+}
+
+.app__lend-lended-item {
+    //width: 80%;
+    margin: 0 auto;
+    height: 60px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    border-radius: 10px;
+    margin:1rem;
+
+    h2 {
+        padding-left: 0.5rem;
+        
+    }
+
+    
+
+    
+}
