@@ -1,0 +1,16 @@
+.sign-in-button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-weight: 500;
+ }
+ 
+ 
+ .sign-in-button:hover {
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    //padding: 2px;
+    color: #7b1113;
+    text-decoration:underline;
+ }
+ 
