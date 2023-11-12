@@ -1,0 +1,97 @@
+#profile {
+    background: linear-gradient(to right, #11989e , #38ef7d);
+    height : 100vh;
+    padding-top: 5rem;
+    
+}
+
+h1{
+    color: white;
+    font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif;
+}
+h2{
+    color: white;
+    font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif; 
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+
+
+#top-panel{
+    display: inline-flex;
+    position: relative;
+    width: 100%;
+    height: 20%;
+    padding-bottom: 10%;
+}
+
+#title{
+    font-size: 3rem;
+    width:30%
+}
+
+#logout-button{
+    margin-left: 50%;
+    margin-right: 0;
+    width: 20%;
+    min-width: 100px;
+    height: 10vh;
+    min-height: 50px;
+    transform: translateY(20%);
+    
+    border-radius: 10%;
+    background: transparent;
+    font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif; 
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#logout-button:hover{
+    border-color: black;
+    color: black;
+    
+}
+
+
+#center-block{
+    position: relative;
+    width: 50vw;
+    left: 25vw;
+}
+
+.profileList{
+    margin-top:10px;
+    margin-bottom: 40px;
+
+}
+
+
+p{
+    margin-left: 15%;
+}
+
+
+.profileItem{
+    display: flex;
+    background-color: #D9D9D9;
+    margin-bottom: 30px;
+    min-width: 500px;
+
+    border-color: transparent;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+.profileItem:hover{
+    display: flex;
+    background-color: transparent;
+    margin-bottom: 30px;
+    min-width: 500px;
+    color: white;
+
+    border-color: black;
+}

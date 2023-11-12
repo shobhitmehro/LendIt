@@ -9,7 +9,17 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+<<<<<<< Updated upstream
     <App />
+=======
+    <Auth0Provider
+      domain = {domain}
+      clientId= {clientID}
+      redirectUri = 'http://localhost:3000/profile'
+    > 
+    <App/>
+    </Auth0Provider>
+>>>>>>> Stashed changes
   </BrowserRouter>
 );
 
