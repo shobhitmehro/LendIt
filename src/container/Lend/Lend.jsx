@@ -40,7 +40,7 @@ const [lendList, setLendList] = useState()
     }
   useEffect(() => {
     fetchData()
-  })
+  },[])
 
   const handleButtonClick = () => {
 

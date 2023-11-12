@@ -28,9 +28,9 @@ const Borrow = () => {
     }
   useEffect(() => {
     fetchData()
-  })
+  },[])
 
-  const handleButtonClick = () => {
+  const handleButtonClick = (e) => {
       setIsSubmitted(true);
   }
 

@@ -38,23 +38,23 @@ const PopupForm = ({ isOpen, onClose }) => {
           {/* Render your form fields here */}
           <label>
             Name:
-            <input type="text" name="username" value={formData.username} onChange={handleChange} />
+            <input type="text" name="username" value={formData.Name} onChange={handleChange} />
           </label>
           <label>
             Item:
-            <input type="text" name="password" value={formData.password} onChange={handleChange} />
+            <input type="text" name="password" value={formData.Item} onChange={handleChange} />
           </label>
           <label>
             Email:
-            <input type="text" name="email" value={formData.password} onChange={handleChange} />
+            <input type="text" name="email" value={formData.Email} onChange={handleChange} />
           </label>
           <label>
             Date Start:
-            <input type="text" name="dates" value={formData.password} onChange={handleChange} />
+            <input type="text" name="dates" value={formData.DateStart} onChange={handleChange} />
           </label>
           <label>
             Date End:
-            <input type="text" name="datee" value={formData.password} onChange={handleChange} />
+            <input type="text" name="datee" value={formData.DateEnd} onChange={handleChange} />
           </label>
           <button type="submit">Submit</button>
         </form>
